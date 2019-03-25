@@ -23,11 +23,8 @@ def print_header
 end
 
 def print(students)
-  puts "Enter first letter of name"
-  first_letter = gets.chomp
-  # user input for initial
   students.each_with_index do |student, index|
-    if first_letter.empty? || student[:name][0] == first_letter
+    if student[:name].length < 12
       indexplusone = index + 1
       puts "#{indexplusone} #{student[:name]} (#{student[:cohort]} cohort)"
     end
